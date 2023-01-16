@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: azure;
+}
+:root {
+    --primary-color: #003699;
+    --dark-color: #333333;
+    --ligh-color: white;
+    --lose-color: #dc3545;
+    --win-color: #28a745;
+    --moadal-duration: 1s;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    text-align: center;
+}
+.restart-btn{
+    display: inline-block;
+    background-color: var(--ligh-color);
+    color: #333;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid crimson;
+    transition: all ease-out 400ms;
+}
+.title::first-letter{
+    color: crimson;
+}
+.title::first-line{
+    color: rgb(79, 3, 243);
+}
+.fa-solid{
+    font-size: 150px;
+}
+.restart-btn:hover{
+    background-color: crimson;
+    transition: all ease-in 400ms;
+    color: white;
+}
+.header {
+    text-align: center;
+    margin: 1rem 0;
+
+}
+.header h1{
+    margin-bottom: 1rem;
+}
+.score{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.2rem;
+    color: white;
+}
+.score p:first-child{
+    background: rgb(79, 3, 243);
+    border-radius: 5px;
+}
+.choice{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#rock,
+#Papper,
+#scissors{
+    transition: all ease-in 400ms;
+    padding: 1rem;
+}
+#rock:hover,
+#Papper:hover,
+#scissors:hover{
+    color: crimson;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all ease-in-out 400ms;
+}
