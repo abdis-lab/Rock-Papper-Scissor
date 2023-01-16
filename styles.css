@@ -23,7 +23,7 @@ body{
     text-align: center;
 }
 .restart-btn{
-    display: inline-block;
+    display: none;
     background-color: var(--ligh-color);
     color: #333;
     padding: 0.4rem 1.3rem;
@@ -40,9 +40,7 @@ body{
 .title::first-line{
     color: rgb(79, 3, 243);
 }
-.fa-solid{
-    font-size: 150px;
-}
+
 .restart-btn:hover{
     background-color: crimson;
     transition: all ease-in 400ms;
@@ -61,26 +59,54 @@ body{
     grid-template-columns: repeat(2, 1fr);
     font-size: 1.2rem;
     color: white;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 .score p:first-child{
     background: rgb(79, 3, 243);
     border-radius: 5px;
 }
-.choice{
+.score p:last-child{
+    background-color: crimson;
+    border-radius: 5px;
+} 
+.choices{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 2rem;
 }
 #rock,
-#Papper,
+#papper,
 #scissors{
     transition: all ease-in 400ms;
     padding: 1rem;
+    font-size: 110px;
 }
 #rock:hover,
-#Papper:hover,
+#papper:hover,
 #scissors:hover{
-    color: crimson;
+    color: rgb(79, 3, 243);
     cursor: pointer;
     transform: scale(1.2);
     transition: all ease-in-out 400ms;
 }
+.text-win{
+    color: green;
+}
+.text-lose{
+    color: red;
+}
+#winner{
+    font-size: 110px;
+}
+
+@media(max-width: 500px){
+    #rock,
+    #Papper,
+    #scissors,
+    #winner{
+        font-size: 85px;
+        
+    }
+    
+} 

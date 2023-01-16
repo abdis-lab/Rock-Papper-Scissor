@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3cfd7f0753.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="styles.css">
     <title>Rock Papper Scissors</title>
 </head>
@@ -18,18 +20,16 @@
                 <p>Computer: 0</p>
             </div>
         </header>
-        <div class="choice">
-            <i id="rock" class="fa-solid fa-hand-back-fist"></i>
-            <i id="Papper" class="fa-solid fa-hand"></i>
-            <i id="scissors" class="fa-solid fa-hand-scissors"></i>
+        <div class="choices">
+            <i id="rock" class="choice fa-solid fa-hand-back-fist fa-10x"></i>
+            <i id="papper" class="choice fa-solid fa-hand fa-10x"></i>
+            <i id="scissors" class="choice fa-solid fa-hand-scissors fa-10x"></i>
         </div>
     </div>
 
     <div class="modal">
-        <div id="result" class="modal-content">
-            <h1>You Win</h1>
-            <i class="fa-solid fa-hand-scissors"></i>
-            <p>Computer chose Scissors you lost</p>
+        <div id="result" class="animate_animated animate__fadeInDownBig modal-content">
+            
         </div>
     </div>
     <script src="app.js"></script>
