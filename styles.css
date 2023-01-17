@@ -34,6 +34,13 @@ body{
     border: 1px solid crimson;
     transition: all ease-out 400ms;
 }
+.text-lose{
+    color: red;
+    font-size: 50px;
+}
+.text-win{
+    color: green;
+}
 .title::first-letter{
     color: crimson;
 }
@@ -74,30 +81,6 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 2rem;
-}
-#rock,
-#papper,
-#scissors{
-    transition: all ease-in 400ms;
-    padding: 1rem;
-    font-size: 110px;
-}
-#rock:hover,
-#papper:hover,
-#scissors:hover{
-    color: rgb(79, 3, 243);
-    cursor: pointer;
-    transform: scale(1.2);
-    transition: all ease-in-out 400ms;
-}
-.text-win{
-    color: green;
-}
-.text-lose{
-    color: red;
-}
-#winner{
-    font-size: 110px;
 }
 
 @media(max-width: 500px){

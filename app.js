@@ -65,7 +65,8 @@ function showWinner(winner, computerChoice){
         //Inc player score
         scoreboard.player++;
         //Show modal result 
-        result.innerHTML = `<h1 class="text-win">You Win</h1>
+        result.innerHTML = `
+        <h1 class="text-win">You Win</h1>
         <i class="fas fa-hand-${computerChoice} fa-10x"</i>
         <p>Computer chose <strong>${computerChoice}</strong></p>
 
@@ -74,24 +75,34 @@ function showWinner(winner, computerChoice){
         // Inc computer score
         scoreboard.computer++;
         //Show modal result 
-        result.innerHTML = `<h1 class="text-lose">You Lose</h1>
+        result.innerHTML = `
+        <h1 class="text-lose">You Lose</h1>
         <i class="fas fa-hand-${computerChoice} fa-10x"</i>
         <p>Computer chose <strong>${computerChoice}</strong></p>
 
         `
     }else {
-        result.innerHTML = `<h1">Its a Draw</h1>
-        <i class="fas fa-hand-${computerChoice} fa-10x"</i>
+        result.innerHTML = `
+        <h1">Its a Draw</h1>
+        <i class="fa-solid fa-hand-${computerChoice} fa-10x"</i>
         <p>Computer chose <strong>${computerChoice}</strong></p>
-
         `
     }
 
-    score.innerHTML = `<p>Player: ${scoreboard.player}</p>
+    score.innerHTML = `
+    <p>Player: ${scoreboard.player}</p>
     <p>computer: ${scoreboard.computer}</p>
-    
     `;
     modal.style.display = 'inline-block';
+}
+
+function restartGame(){
+    scoreboard.player = 0;
+    scoreboard.computer = 0;
+    score.innerHTML = `
+    <p>player: 0</p>
+    <p>computer: 0</p>
+    `
 }
 
 //Event listeners
@@ -101,3 +112,4 @@ window.addEventListener('click', (e) => {
     }
 } )
 choices.forEach(choice => choice.addEventListener('click', play))
+restart.addEventListener('click', restartGame)
